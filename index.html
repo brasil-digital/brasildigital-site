@@ -117,7 +117,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ouro); outline-
 .titulo-livro p { color: var(--suave); font-size: .97rem; }
 @media (max-width: 860px) { .titulos { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .titulos { grid-template-columns: 1fr; } }
-.onde-comprar { color: var(--suave); border-top: 1px solid var(--linha); padding-top: 18px; }
+.onde-comprar { color: var(--suave); border-top: 1px solid var(--linha); padding-top: 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
 .onde-comprar b { color: var(--texto); }
 .autor { color: var(--suave); }
 .autor b { color: var(--texto); }
@@ -293,7 +293,10 @@ footer nav a:hover { color: var(--texto); }
       <div class="titulo-livro"><h3>O Império das Apostas</h3><p>A verdade sobre as bets, o jogo do tigrinho e a ilusão do dinheiro fácil.</p></div>
       <div class="titulo-livro"><h3>Bitcoin e Blockchain</h3><p>A revolução digital em detalhes.</p></div>
     </div>
-    <p class="onde-comprar">Disponíveis na <b>Amazon</b> e, no Brasil, em diversas livrarias online pela <b>Editora Viseu</b>.</p>
+    <div class="onde-comprar">
+      <p>Disponíveis na <b>Amazon</b> e, no Brasil, em diversas livrarias online pela <b>Editora Viseu</b>.</p>
+      <a class="btn ouro" href="https://www.amazon.com/s?k=ronny+youxay+oliveira" target="_blank" rel="noopener">Ver os livros na Amazon</a>
+    </div>
   </div>
 </section>
 
