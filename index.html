@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brasil Digital | Tecnologia, Educação e Soberania</title>
+<meta name="description" content="Brasil Digital: aplicativos, educação, mídia e livros de Ronny Youxay Oliveira para uma vida digital segura, inteligente e soberana. App Fala Brasil, IA Fala Brasil, Missão IA, SafeID e mais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brasildigital.online/">
+<meta property="og:title" content="Brasil Digital | Moldando o futuro digital, com segurança para todos">
+<meta property="og:description" content="Aplicativos, educação, mídia e livros para preparar brasileiros para a era digital.">
+<meta property="og:image" content="https://brasildigital.online/img/compartilhar.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<meta name="theme-color" content="#08182e">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: página longa em faixas de largura total sobre azul-noite; conteúdo numa coluna de até 1120px. Abertura em duas colunas (texto + retrato), depois números, ecossistema em grade por área, livros, palestras, reconhecimentos e chamada para parceiros. Mundo único (escuro) por escolha, puxado do logo. */
+:root {
+  --noite: #08182e;
+  --noite-2: #0d2242;
+  --painel: #11294d;
+  --linha: #23406b;
+  --texto: #e9f0fa;
+  --suave: #a9bad3;
+  --ouro: #e8b83a;
+  --ouro-claro: #f6d77a;
+  --verde: #18a35c;
+  --azul: #3b8bff;
+  --display: "Sora", "Segoe UI", system-ui, sans-serif;
+  --corpo: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--noite); color: var(--texto); font-family: var(--corpo); font-size: 18px; line-height: 1.6; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+.faixa { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 72px; }
+.faixa.alt { background: var(--noite-2); }
+.miolo { max-width: 1120px; margin: 0 auto; display: grid; gap: 32px; min-width: 0; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.12; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2.3rem, 5.4vw, 3.7rem); font-weight: 800; letter-spacing: -.02em; }
+h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); font-weight: 700; letter-spacing: -.01em; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+p { margin: 0; }
+.rotulo { font-family: var(--display); font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ouro); }
+.suave { color: var(--suave); }
+.cabeca { display: grid; gap: 10px; max-width: 760px; }
+/* Topo */
+.topo { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(8, 24, 46, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--linha); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--noite); }
+.topo .miolo { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 10px; }
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 800; letter-spacing: .02em; }
+.marca img { width: 44px; height: auto; }
+.marca span b { color: var(--ouro); font-weight: 800; }
+.menu { display: flex; gap: 22px; font-weight: 600; font-size: .98rem; }
+.menu a { text-decoration: none; color: var(--suave); }
+.menu a:hover, .menu a:focus-visible { color: var(--texto); }
+@media (max-width: 820px) { .menu { display: none; } }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--display); font-weight: 700; font-size: 1rem; padding: 13px 22px; border-radius: 12px; text-decoration: none; border: 0; cursor: pointer; }
+.btn.ouro { background: var(--ouro); color: #1a1405; }
+.btn.ouro:hover { background: var(--ouro-claro); }
+.btn.linha { border: 1.5px solid var(--linha); color: var(--texto); background: transparent; }
+.btn.linha:hover { border-color: var(--ouro); }
+.btn.peq { padding: 9px 16px; font-size: .92rem; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--ouro); outline-offset: 3px; }
+/* Abertura */
+.abertura { padding-block: 64px 72px; background: radial-gradient(1000px 520px at 85% 10%, rgba(59, 139, 255, .18), transparent 60%), radial-gradient(800px 480px at 0% 100%, rgba(24, 163, 92, .14), transparent 60%), var(--noite); }
+.abertura .miolo { grid-template-columns: 1.15fr .85fr; align-items: center; gap: 48px; }
+.abertura .texto { display: grid; gap: 22px; min-width: 0; }
+.abertura .texto > p { font-size: 1.18rem; color: var(--suave); max-width: 600px; }
+.abertura .acoes { display: flex; flex-wrap: wrap; gap: 12px; }
+.retrato { position: relative; justify-self: center; width: min(100%, 420px); }
+.retrato img { border-radius: 24px; border: 1px solid var(--linha); aspect-ratio: 1; object-fit: cover; width: 100%; }
+.retrato figcaption { position: absolute; left: 16px; right: 16px; bottom: 16px; background: rgba(8, 24, 46, .88); border: 1px solid var(--linha); border-radius: 14px; padding: 12px 16px; display: grid; gap: 2px; }
+.retrato figcaption b { font-family: var(--display); }
+.retrato figcaption span { color: var(--suave); font-size: .92rem; }
+@media (max-width: 860px) { .abertura .miolo { grid-template-columns: 1fr; } .retrato { order: -1; width: min(100%, 360px); } }
+/* Números */
+.numeros { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--linha); border: 1px solid var(--linha); border-radius: 18px; overflow: hidden; }
+.numero { background: var(--painel); padding: 22px 20px; display: grid; gap: 4px; min-width: 0; }
+.numero b { font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--ouro); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.numero span { color: var(--suave); font-size: .95rem; }
+@media (max-width: 560px) { .numeros { grid-template-columns: 1fr; } }
+/* Ecossistema */
+.areas { display: grid; gap: 36px; }
+.area { display: grid; gap: 14px; }
+.area > h3 { font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--suave); display: flex; align-items: center; gap: 12px; }
+.area > h3::after { content: ""; flex: 1; height: 1px; background: var(--linha); }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+.card { background: var(--painel); border: 1px solid var(--linha); border-radius: 18px; padding: 20px; display: grid; grid-template-rows: auto 1fr auto; gap: 10px; min-width: 0; }
+.card .tit { display: flex; align-items: center; gap: 12px; }
+.card .tit img { width: 40px; height: 40px; border-radius: 10px; }
+.card .sigla { width: 40px; height: 40px; border-radius: 10px; display: grid; place-content: center; font-family: var(--display); font-weight: 800; font-size: .9rem; background: var(--noite); border: 1px solid var(--linha); color: var(--ouro); flex: 0 0 auto; }
+.card p { color: var(--suave); font-size: .98rem; }
+.card .ir { font-family: var(--display); font-weight: 700; font-size: .92rem; color: var(--ouro); text-decoration: none; }
+.card .ir:hover { text-decoration: underline; }
+.card .ir small { color: var(--suave); font-family: var(--corpo); font-weight: 600; }
+.selo-novo { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; background: var(--verde); color: #fff; border-radius: 99px; padding: 2px 8px; margin-left: auto; }
+/* Livros */
+.livros { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.livro { background: var(--painel); border: 1px solid var(--linha); border-radius: 18px; overflow: hidden; display: grid; grid-template-rows: 240px auto; min-width: 0; }
+.livro .capa { background: #050d1a; display: grid; place-items: center; overflow: hidden; }
+.livro .capa img { width: 100%; height: 100%; object-fit: contain; }
+.livro .info { padding: 16px 18px 20px; display: grid; gap: 6px; align-content: start; }
+.livro .info p { color: var(--suave); font-size: .95rem; }
+@media (max-width: 960px) { .livros { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .livros { grid-template-columns: 1fr; } }
+.autor { color: var(--suave); }
+.autor b { color: var(--texto); }
+/* Palestras */
+.duas { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+@media (max-width: 820px) { .duas { grid-template-columns: 1fr; } }
+.temas { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.temas li { border: 1px solid var(--linha); border-radius: 99px; padding: 7px 14px; font-weight: 600; font-size: .95rem; background: var(--painel); }
+.publico { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.publico li { display: flex; gap: 12px; align-items: baseline; }
+.publico li::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--ouro); flex: 0 0 auto; transform: translateY(-2px); }
+/* Reconhecimentos */
+.marcos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.marco { border-left: 3px solid var(--ouro); padding: 6px 0 6px 18px; display: grid; gap: 4px; }
+.marco .quando { font-family: var(--display); font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ouro); }
+.marco p { color: var(--suave); font-size: .97rem; }
+@media (max-width: 820px) { .marcos { grid-template-columns: 1fr; } }
+/* Soberania */
+.manifesto { font-family: var(--display); font-size: clamp(1.3rem, 2.6vw, 1.8rem); font-weight: 700; line-height: 1.35; max-width: 900px; }
+.manifesto em { font-style: normal; color: var(--ouro); }
+/* Parceiros */
+.parceiro { background: linear-gradient(135deg, var(--painel), var(--noite-2)); border: 1px solid var(--linha); border-radius: 24px; padding: clamp(24px, 4vw, 44px); display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: center; }
+.parceiro ul { margin: 0; padding-left: 20px; color: var(--suave); display: grid; gap: 6px; }
+.contato { display: grid; gap: 12px; background: var(--noite); border: 1px solid var(--linha); border-radius: 18px; padding: 20px; min-width: 0; }
+.email { font-family: var(--display); font-weight: 700; font-size: 1.05rem; overflow-wrap: anywhere; user-select: all; }
+@media (max-width: 820px) { .parceiro { grid-template-columns: 1fr; } }
+/* Rodapé */
+footer { border-top: 1px solid var(--linha); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 40px; color: var(--suave); font-size: .92rem; }
+footer .miolo { grid-template-columns: 1fr auto; align-items: center; gap: 16px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 16px; }
+footer nav a { text-decoration: none; }
+footer nav a:hover { color: var(--texto); }
+@media (max-width: 700px) { footer .miolo { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="miolo">
+    <a class="marca" href="#inicio"><img src="img/logo-brasil-digital.png" alt=""><span>BRASIL <b>DIGITAL</b></span></a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#ecossistema">Ecossistema</a>
+      <a href="#livros">Livros</a>
+      <a href="#palestras">Palestras</a>
+      <a href="#parceiros">Parcerias</a>
+    </nav>
+    <a class="btn ouro peq" href="#parceiros">Seja parceiro</a>
+  </div>
+</header>
+
+<section class="abertura faixa" id="inicio">
+  <div class="miolo">
+    <div class="texto">
+      <span class="rotulo">Tecnologia · Educação · Soberania</span>
+      <h1>Moldando o futuro digital, com segurança para todos.</h1>
+      <p>O Brasil Digital reúne aplicativos, educação, mídia e livros para preparar brasileiros, no Brasil e no exterior, para uma vida digital segura, inteligente e soberana.</p>
+      <div class="acoes">
+        <a class="btn ouro" href="#ecossistema">Conheça o ecossistema</a>
+        <a class="btn linha" href="https://iafalabrasil.com.br" target="_blank" rel="noopener">IA Fala Brasil Educacional</a>
+      </div>
+    </div>
+    <figure class="retrato" style="margin:0">
+      <img src="img/ronny.jpg" alt="Ronny Youxay Oliveira">
+      <figcaption><b>Ronny Youxay Oliveira</b><span>Fundador do Brasil Digital e criador do app Fala Brasil</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="faixa alt" aria-label="Números">
+  <div class="miolo">
+    <div class="numeros">
+      <div class="numero"><b>4 mil+</b><span>instalações do app Fala Brasil</span></div>
+      <div class="numero"><b>4</b><span>livros publicados</span></div>
+      <div class="numero"><b>24h</b><span>de rádio com música original</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="faixa" id="ecossistema">
+  <div class="miolo">
+    <div class="cabeca">
+      <span class="rotulo">Ecossistema</span>
+      <h2>Um ecossistema completo, em constante expansão</h2>
+      <p class="suave">Cada projeto resolve uma parte do mesmo desafio: colocar a tecnologia a serviço das pessoas, com proteção e conhecimento.</p>
+    </div>
+    <div class="areas">
+      <div class="area">
+        <h3>Aplicativos</h3>
+        <div class="cards">
+          <article class="card">
+            <div class="tit"><img src="img/icone-fala-brasil.png" alt=""><h3>App Fala Brasil™</h3></div>
+            <p>O aplicativo dos brasileiros em vários países: chat com tradução, alertas, Minha Cidade, segurança, jogos e conteúdo da comunidade.</p>
+            <a class="ir" href="https://www.falabrasil.digital/baixar/" target="_blank" rel="noopener">Baixar grátis <small>App Store e Google Play</small></a>
+          </article>
+          <article class="card">
+            <div class="tit"><span class="sigla">IA</span><h3>IA Fala Brasil</h3></div>
+            <p>Plataforma de alfabetização em inteligência artificial para o cidadão, com ferramentas para identificar golpes e aprender a usar a IA no dia a dia.</p>
+            <a class="ir" href="https://iafalabrasil.com.br" target="_blank" rel="noopener">iafalabrasil.com.br</a>
+          </article>
+          <article class="card">
+            <div class="tit"><span class="sigla">ID</span><h3>SafeID.Global</h3></div>
+            <p>Proteção digital para cidadãos, famílias e empresas: dados pessoais, contas, aparelhos e exposição em vazamentos.</p>
+            <a class="ir" href="https://www.safeid.global/" target="_blank" rel="noopener">safeid.global</a>
+          </article>
+        </div>
+      </div>
+      <div class="area">
+        <h3>Educação</h3>
+        <div class="cards">
+          <article class="card">
+            <div class="tit"><span class="sigla">MI</span><h3>Missão IA</h3><span class="selo-novo">Novo</span></div>
+            <p>Jogo gratuito para crianças e adolescentes aprenderem a lidar com a IA: 8 fases, desafio final e certificado Brasil Digital.</p>
+            <a class="ir" href="https://missaoia.brasildigital.online" target="_blank" rel="noopener">Jogar agora</a>
+          </article>
+          <article class="card">
+            <div class="tit"><span class="sigla">EDU</span><h3>IA Fala Brasil Educacional</h3></div>
+            <p>Videoaulas e kit para escolas e prefeituras: golpes digitais, notícias falsas e uso da IA para estudar.</p>
+            <a class="ir" href="#parceiros">Levar para minha cidade</a>
+          </article>
+          <article class="card">
+            <div class="tit"><span class="sigla">PAL</span><h3>Palestras e workshops</h3></div>
+            <p>Segurança cibernética, alfabetização digital e uso responsável da IA para escolas, empresas e governos.</p>
+            <a class="ir" href="#palestras">Ver temas</a>
+          </article>
+        </div>
+      </div>
+      <div class="area">
+        <h3>Mídia e entretenimento</h3>
+        <div class="cards">
+          <article class="card">
+            <div class="tit"><span class="sigla">FM</span><h3>Rádio Fala Brasil</h3></div>
+            <p>Rádio online com programação brasileira o dia inteiro, do sertanejo à música internacional.</p>
+            <a class="ir" href="https://radiofalabrasil.com" target="_blank" rel="noopener">radiofalabrasil.com</a>
+          </article>
+          <article class="card">
+            <div class="tit"><span class="sigla">24h</span><h3>Rádio Ritmos do Brasil e do Mundo</h3></div>
+            <p>Transmissão ao vivo 24 horas no YouTube, só com músicas originais.</p>
+            <a class="ir" href="https://www.youtube.com/@ritmos-do-mundo" target="_blank" rel="noopener">Ouvir no YouTube</a>
+          </article>
+          <article class="card">
+            <div class="tit"><span class="sigla">YT</span><h3>Canal Brasil Digital</h3></div>
+            <p>Tecnologia, IA e segurança digital explicadas de um jeito simples, em vídeos e aulas.</p>
+            <a class="ir" href="https://www.youtube.com/channel/UCVXyxst4cIDX8IKnd1v4JUw" target="_blank" rel="noopener">Assistir no YouTube</a>
+          </article>
+          <article class="card">
+            <div class="tit"><span class="sigla">JG</span><h3>Jogos Fala Brasil</h3></div>
+            <p>Portal de jogos brasileiros para todas as idades, incluindo o Mega Brasil.</p>
+            <a class="ir" href="https://app.falabrasil.digital/jogos/" target="_blank" rel="noopener">Jogar</a>
+          </article>
+          <article class="card">
+            <div class="tit"><span class="sigla">LJ</span><h3>Fala Brasil Store</h3></div>
+            <p>Camisetas e produtos com o orgulho de ser brasileiro, em qualquer lugar do mundo.</p>
+            <a class="ir" href="https://loja.falabrasil.digital" target="_blank" rel="noopener">Visitar a loja</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faixa alt" id="livros">
+  <div class="miolo">
+    <div class="cabeca">
+      <span class="rotulo">Livros</span>
+      <h2>Obras para entender a era digital</h2>
+      <p class="autor">Escritos por <b>Ronny Youxay Oliveira</b>, para educar, esclarecer e preparar os brasileiros para o mundo digital.</p>
+    </div>
+    <div class="livros">
+      <article class="livro">
+        <div class="capa"><img src="img/livro-seguranca.jpg" alt="Capa do livro Segurança Digital para Crianças e Adolescentes"></div>
+        <div class="info"><h3>Segurança Digital para Crianças e Adolescentes</h3><p>Guia completo para os jovens exploradores da era digital.</p></div>
+      </article>
+      <article class="livro">
+        <div class="capa"><img src="img/livro-ia.jpg" alt="Capa do livro Inteligência Artificial"></div>
+        <div class="info"><h3>Inteligência Artificial</h3><p>Tecnologia, ética e o futuro digital.</p></div>
+      </article>
+      <article class="livro">
+        <div class="capa"><img src="img/livro-bitcoin.jpg" alt="Capa do livro Bitcoin e Blockchain"></div>
+        <div class="info"><h3>Bitcoin e Blockchain</h3><p>A revolução digital em detalhes.</p></div>
+      </article>
+      <article class="livro">
+        <div class="capa"><img src="img/livro-imperio.jpg" alt="Capa do livro O Império das Apostas"></div>
+        <div class="info"><h3>O Império das Apostas</h3><p>A verdade sobre o jogo online no Brasil.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="faixa" id="palestras">
+  <div class="miolo duas">
+    <div class="cabeca">
+      <span class="rotulo">Palestras e workshops</span>
+      <h2>Conhecimento que muda comportamento</h2>
+      <p class="suave">Cada palestra é desenhada para criar consciência digital real, com exemplos do dia a dia e linguagem para cada público.</p>
+      <ul class="publico">
+        <li>Escolas públicas e privadas</li>
+        <li>Prefeituras e secretarias de educação</li>
+        <li>Universidades e centros de pesquisa</li>
+        <li>Empresas e instituições governamentais</li>
+        <li>Eventos de tecnologia, inovação e segurança</li>
+      </ul>
+    </div>
+    <ul class="temas" aria-label="Temas">
+      <li>Segurança cibernética</li>
+      <li>Alfabetização digital infantil e juvenil</li>
+      <li>Uso responsável da IA</li>
+      <li>Proteção de identidade</li>
+      <li>Golpes digitais e notícias falsas</li>
+      <li>Futuro do trabalho e tecnologia</li>
+      <li>Blockchain e finanças digitais</li>
+      <li>Soberania digital</li>
+    </ul>
+  </div>
+</section>
+
+<section class="faixa alt" aria-label="Reconhecimentos">
+  <div class="miolo">
+    <div class="cabeca">
+      <span class="rotulo">Reconhecimentos</span>
+      <h2>Trajetória reconhecida</h2>
+    </div>
+    <div class="marcos">
+      <div class="marco"><span class="quando">2025</span><h3>Best of the Year 2025</h3><p>Prêmio concedido pelo jornal Brazilian Times, referência da comunidade brasileira nos Estados Unidos.</p></div>
+      <div class="marco"><span class="quando">Setembro de 2026 · Nova York</span><h3>Prêmio Notáveis 2026</h3><p>XVI Notable Brazilian Award, a convite do jornal Brazilian Times, no Hard Rock Cafe da Times Square.</p></div>
+      <div class="marco"><span class="quando">2026</span><h3>Marca FALA BRASIL™</h3><p>Marca do aplicativo com registro em fase final nos Estados Unidos.</p></div>
+      <div class="marco"><span class="quando">Desde 2001 nos EUA</span><h3>Da comunidade, para a comunidade</h3><p>Brasileiro que chegou aos Estados Unidos em 2001 e transformou a própria experiência em tecnologia para quem vive longe de casa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faixa" aria-label="Soberania digital">
+  <div class="miolo">
+    <span class="rotulo">Nossa visão</span>
+    <p class="manifesto">Nenhum país terá um futuro forte se depender só de tecnologia estrangeira. O Brasil Digital trabalha por <em>soluções nacionais</em>, que protejam os dados, a privacidade e as crianças, e coloquem o Brasil como <em>referência digital</em> na América Latina.</p>
+  </div>
+</section>
+
+<section class="faixa alt" id="parceiros">
+  <div class="miolo">
+    <div class="parceiro">
+      <div style="display:grid;gap:16px;min-width:0">
+        <span class="rotulo">Parcerias e patrocínio</span>
+        <h2>Vamos construir juntos</h2>
+        <p class="suave">Empresas, prefeituras, escolas e organizações podem fazer parte do ecossistema Brasil Digital:</p>
+        <ul>
+          <li>Patrocínio do app Fala Brasil, da rádio e da Missão IA</li>
+          <li>Programas de educação digital para escolas e cidades</li>
+          <li>Palestras e workshops para equipes e eventos</li>
+          <li>Parcerias de conteúdo e tecnologia</li>
+        </ul>
+      </div>
+      <div class="contato">
+        <span class="rotulo">Fale com a gente</span>
+        <span class="email" id="email">suporte@falabrasil.digital</span>
+        <button class="btn ouro" id="copiar" type="button">Copiar e-mail</button>
+        <span class="suave" id="copiado" hidden>E-mail copiado.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="miolo">
+    <p>© 2026 Brasil Digital · Tecnologia, Educação e Soberania. Uma iniciativa de Ronny Youxay Oliveira.</p>
+    <nav aria-label="Links">
+      <a href="https://www.falabrasil.digital" target="_blank" rel="noopener">Fala Brasil</a>
+      <a href="https://missaoia.brasildigital.online" target="_blank" rel="noopener">Missão IA</a>
+      <a href="https://www.safeid.global/" target="_blank" rel="noopener">SafeID</a>
+      <a href="https://radiofalabrasil.com" target="_blank" rel="noopener">Rádio</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+document.getElementById("copiar").addEventListener("click", async () => {
+  const ok = document.getElementById("copiado");
+  try { await navigator.clipboard.writeText("suporte@falabrasil.digital"); ok.textContent = "E-mail copiado."; }
+  catch (e) {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById("email"));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    ok.textContent = "Selecionei o e-mail. Use Ctrl+C para copiar.";
+  }
+  ok.hidden = false;
+});
+</script>
+</body>
+</html>
