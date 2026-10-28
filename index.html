@@ -112,6 +112,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ouro); outline-
 @media (max-width: 960px) { .livros { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .livros { grid-template-columns: 1fr; } }
 .estante { width: 100%; border-radius: 22px; border: 1px solid var(--linha); aspect-ratio: 3 / 2; object-fit: cover; }
+.titulos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.titulo-livro { border-top: 3px solid var(--ouro); padding-top: 14px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.titulo-livro p { color: var(--suave); font-size: .97rem; }
+@media (max-width: 860px) { .titulos { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .titulos { grid-template-columns: 1fr; } }
 .autor { color: var(--suave); }
 .autor b { color: var(--texto); }
 /* Palestras */
@@ -280,23 +285,11 @@ footer nav a:hover { color: var(--texto); }
       <p class="autor">Escritos por <b>Ronny Youxay Oliveira</b>, para educar, esclarecer e preparar os brasileiros para o mundo digital.</p>
     </div>
     <img class="estante" src="img/livros-estante.jpg" alt="Os quatro livros de Ronny Youxay Oliveira lado a lado" loading="lazy">
-    <div class="livros">
-      <article class="livro">
-        <div class="capa"><img src="img/livro-seguranca.jpg" alt="Capa do livro Segurança Digital para Crianças e Adolescentes"></div>
-        <div class="info"><h3>Segurança Digital para Crianças e Adolescentes</h3><p>Guia completo para os jovens exploradores da era digital.</p></div>
-      </article>
-      <article class="livro">
-        <div class="capa"><img src="img/livro-ia.jpg" alt="Capa do livro Inteligência Artificial"></div>
-        <div class="info"><h3>Inteligência Artificial</h3><p>Tecnologia, ética e o futuro digital.</p></div>
-      </article>
-      <article class="livro">
-        <div class="capa"><img src="img/livro-bitcoin.jpg" alt="Capa do livro Bitcoin e Blockchain"></div>
-        <div class="info"><h3>Bitcoin e Blockchain</h3><p>A revolução digital em detalhes.</p></div>
-      </article>
-      <article class="livro">
-        <div class="capa"><img src="img/livro-imperio.jpg" alt="Capa do livro O Império das Apostas"></div>
-        <div class="info"><h3>O Império das Apostas</h3><p>A verdade sobre as bets, o jogo do tigrinho e a ilusão do dinheiro fácil.</p></div>
-      </article>
+    <div class="titulos">
+      <div class="titulo-livro"><h3>Segurança Digital para Crianças e Adolescentes</h3><p>Guia completo para os jovens exploradores da era digital.</p></div>
+      <div class="titulo-livro"><h3>Inteligência Artificial</h3><p>Tecnologia, ética e o futuro digital.</p></div>
+      <div class="titulo-livro"><h3>O Império das Apostas</h3><p>A verdade sobre as bets, o jogo do tigrinho e a ilusão do dinheiro fácil.</p></div>
+      <div class="titulo-livro"><h3>Bitcoin e Blockchain</h3><p>A revolução digital em detalhes.</p></div>
     </div>
   </div>
 </section>
