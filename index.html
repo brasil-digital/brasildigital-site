@@ -122,6 +122,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ouro); outline-
 @media (max-width: 480px) { .titulos { grid-template-columns: 1fr; } }
 .onde-comprar { color: var(--suave); border-top: 1px solid var(--linha); padding-top: 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
 .onde-comprar b { color: var(--texto); }
+.botoes-loja { display: flex; flex-wrap: wrap; gap: 10px; }
+.comprar { font-family: var(--display); font-weight: 700; font-size: .92rem; color: var(--ouro); text-decoration: none; margin-top: 4px; }
+.comprar:hover { text-decoration: underline; }
 .autor { color: var(--suave); }
 .autor b { color: var(--texto); }
 /* Palestras */
@@ -291,14 +294,17 @@ footer nav a:hover { color: var(--texto); }
     </div>
     <img class="estante" src="img/livros-autor.jpg" alt="Ronny Youxay Oliveira e seus quatro livros: Segurança Digital para Crianças e Adolescentes, Inteligência Artificial, O Império das Apostas e Bitcoin e Blockchain" loading="lazy">
     <div class="titulos">
-      <div class="titulo-livro"><h3>Segurança Digital para Crianças e Adolescentes</h3><p>Guia completo para os jovens exploradores da era digital.</p></div>
-      <div class="titulo-livro"><h3>Inteligência Artificial</h3><p>Tecnologia, ética e o futuro digital.</p></div>
-      <div class="titulo-livro"><h3>O Império das Apostas</h3><p>A verdade sobre as bets, o jogo do tigrinho e a ilusão do dinheiro fácil.</p></div>
-      <div class="titulo-livro"><h3>Bitcoin e Blockchain</h3><p>A revolução digital em detalhes.</p></div>
+      <div class="titulo-livro"><h3>Segurança Digital para Crianças e Adolescentes</h3><p>Guia completo para os jovens exploradores da era digital.</p><a class="comprar" href="https://www.amazon.com.br/dp/6525499933" target="_blank" rel="noopener">Comprar na Amazon Brasil →</a></div>
+      <div class="titulo-livro"><h3>Inteligência Artificial</h3><p>Tecnologia, ética e o futuro digital.</p><a class="comprar" href="https://www.amazon.com.br/dp/6528013470" target="_blank" rel="noopener">Comprar na Amazon Brasil →</a></div>
+      <div class="titulo-livro"><h3>O Império das Apostas</h3><p>A verdade sobre as bets, o jogo do tigrinho e a ilusão do dinheiro fácil.</p><a class="comprar" href="https://www.amazon.com.br/dp/6528025053" target="_blank" rel="noopener">Comprar na Amazon Brasil →</a></div>
+      <div class="titulo-livro"><h3>Bitcoin e Blockchain</h3><p>A revolução digital em detalhes.</p><a class="comprar" href="https://www.amazon.com.br/dp/6528015635" target="_blank" rel="noopener">Comprar na Amazon Brasil →</a></div>
     </div>
     <div class="onde-comprar">
       <p>Disponíveis na <b>Amazon</b> e, no Brasil, em diversas livrarias online pela <b>Editora Viseu</b>.</p>
-      <a class="btn ouro" href="https://www.amazon.com/s?k=ronny+youxay+oliveira" target="_blank" rel="noopener">Ver os livros na Amazon</a>
+      <div class="botoes-loja">
+        <a class="btn ouro" href="https://www.amazon.com.br/s?k=ronny+youxay+oliveira" target="_blank" rel="noopener">Amazon Brasil</a>
+        <a class="btn linha" href="https://www.amazon.com/s?k=ronny+youxay+oliveira" target="_blank" rel="noopener">Amazon EUA</a>
+      </div>
     </div>
   </div>
 </section>
