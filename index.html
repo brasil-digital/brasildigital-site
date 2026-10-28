@@ -111,6 +111,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ouro); outline-
 .livro .info p { color: var(--suave); font-size: .95rem; }
 @media (max-width: 960px) { .livros { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .livros { grid-template-columns: 1fr; } }
+.estante { width: 100%; border-radius: 22px; border: 1px solid var(--linha); aspect-ratio: 3 / 2; object-fit: cover; }
 .autor { color: var(--suave); }
 .autor b { color: var(--texto); }
 /* Palestras */
@@ -278,6 +279,7 @@ footer nav a:hover { color: var(--texto); }
       <h2>Obras para entender a era digital</h2>
       <p class="autor">Escritos por <b>Ronny Youxay Oliveira</b>, para educar, esclarecer e preparar os brasileiros para o mundo digital.</p>
     </div>
+    <img class="estante" src="img/livros-estante.jpg" alt="Os quatro livros de Ronny Youxay Oliveira lado a lado" loading="lazy">
     <div class="livros">
       <article class="livro">
         <div class="capa"><img src="img/livro-seguranca.jpg" alt="Capa do livro Segurança Digital para Crianças e Adolescentes"></div>
