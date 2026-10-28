@@ -123,7 +123,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--ouro); outline-
 .onde-comprar { color: var(--suave); border-top: 1px solid var(--linha); padding-top: 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
 .onde-comprar b { color: var(--texto); }
 .botoes-loja { display: flex; flex-wrap: wrap; gap: 10px; }
-.comprar { font-family: var(--display); font-weight: 700; font-size: .92rem; color: var(--ouro); text-decoration: none; margin-top: 4px; }
+.comprar { font-family: var(--display); font-weight: 700; font-size: .92rem; color: var(--ouro); text-decoration: none; margin-top: 4px; display: inline-flex; align-items: center; gap: 8px; }
+.bandeira { width: 24px; height: auto; flex: 0 0 auto; border-radius: 3px; box-shadow: 0 0 0 1px rgba(255,255,255,.18); }
+.btn.verde { background: var(--verde); color: #fff; }
+.btn.verde:hover { background: #1db96a; }
 .comprar:hover { text-decoration: underline; }
 .autor { color: var(--suave); }
 .autor b { color: var(--texto); }
@@ -294,16 +297,16 @@ footer nav a:hover { color: var(--texto); }
     </div>
     <img class="estante" src="img/livros-autor.jpg" alt="Ronny Youxay Oliveira e seus quatro livros: Segurança Digital para Crianças e Adolescentes, Inteligência Artificial, O Império das Apostas e Bitcoin e Blockchain" loading="lazy">
     <div class="titulos">
-      <div class="titulo-livro"><h3>Segurança Digital para Crianças e Adolescentes</h3><p>Guia completo para os jovens exploradores da era digital.</p><a class="comprar" href="https://www.amazon.com.br/dp/6525499933" target="_blank" rel="noopener">Comprar na Amazon Brasil →</a></div>
-      <div class="titulo-livro"><h3>Inteligência Artificial</h3><p>Tecnologia, ética e o futuro digital.</p><a class="comprar" href="https://www.amazon.com.br/dp/6528013470" target="_blank" rel="noopener">Comprar na Amazon Brasil →</a></div>
-      <div class="titulo-livro"><h3>O Império das Apostas</h3><p>A verdade sobre as bets, o jogo do tigrinho e a ilusão do dinheiro fácil.</p><a class="comprar" href="https://www.amazon.com.br/dp/6528025053" target="_blank" rel="noopener">Comprar na Amazon Brasil →</a></div>
-      <div class="titulo-livro"><h3>Bitcoin e Blockchain</h3><p>A revolução digital em detalhes.</p><a class="comprar" href="https://www.amazon.com.br/dp/6528015635" target="_blank" rel="noopener">Comprar na Amazon Brasil →</a></div>
+      <div class="titulo-livro"><h3>Segurança Digital para Crianças e Adolescentes</h3><p>Guia completo para os jovens exploradores da era digital.</p><a class="comprar" href="https://www.amazon.com.br/dp/6525499933" target="_blank" rel="noopener"><svg class="bandeira" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#009c3b"/><path d="M14 3 25 10 14 17 3 10Z" fill="#ffdf00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/><path d="M10.1 9.2c2.6-.6 5.3-.2 7.7 1" stroke="#fff" stroke-width=".9" fill="none"/></svg>Comprar na Amazon Brasil →</a></div>
+      <div class="titulo-livro"><h3>Inteligência Artificial</h3><p>Tecnologia, ética e o futuro digital.</p><a class="comprar" href="https://www.amazon.com.br/dp/6528013470" target="_blank" rel="noopener"><svg class="bandeira" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#009c3b"/><path d="M14 3 25 10 14 17 3 10Z" fill="#ffdf00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/><path d="M10.1 9.2c2.6-.6 5.3-.2 7.7 1" stroke="#fff" stroke-width=".9" fill="none"/></svg>Comprar na Amazon Brasil →</a></div>
+      <div class="titulo-livro"><h3>O Império das Apostas</h3><p>A verdade sobre as bets, o jogo do tigrinho e a ilusão do dinheiro fácil.</p><a class="comprar" href="https://www.amazon.com.br/dp/6528025053" target="_blank" rel="noopener"><svg class="bandeira" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#009c3b"/><path d="M14 3 25 10 14 17 3 10Z" fill="#ffdf00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/><path d="M10.1 9.2c2.6-.6 5.3-.2 7.7 1" stroke="#fff" stroke-width=".9" fill="none"/></svg>Comprar na Amazon Brasil →</a></div>
+      <div class="titulo-livro"><h3>Bitcoin e Blockchain</h3><p>A revolução digital em detalhes.</p><a class="comprar" href="https://www.amazon.com.br/dp/6528015635" target="_blank" rel="noopener"><svg class="bandeira" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#009c3b"/><path d="M14 3 25 10 14 17 3 10Z" fill="#ffdf00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/><path d="M10.1 9.2c2.6-.6 5.3-.2 7.7 1" stroke="#fff" stroke-width=".9" fill="none"/></svg>Comprar na Amazon Brasil →</a></div>
     </div>
     <div class="onde-comprar">
       <p>Disponíveis na <b>Amazon</b> e, no Brasil, em diversas livrarias online pela <b>Editora Viseu</b>.</p>
       <div class="botoes-loja">
-        <a class="btn ouro" href="https://www.amazon.com.br/s?k=ronny+youxay+oliveira" target="_blank" rel="noopener">🇧🇷 Comprar no Brasil · Amazon.com.br</a>
-        <a class="btn linha" href="https://www.amazon.com/s?k=ronny+youxay+oliveira" target="_blank" rel="noopener">🇺🇸 Comprar nos EUA · Amazon.com</a>
+        <a class="btn ouro" href="https://www.amazon.com.br/s?k=ronny+youxay+oliveira" target="_blank" rel="noopener"><svg class="bandeira" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#009c3b"/><path d="M14 3 25 10 14 17 3 10Z" fill="#ffdf00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/><path d="M10.1 9.2c2.6-.6 5.3-.2 7.7 1" stroke="#fff" stroke-width=".9" fill="none"/></svg>Comprar no Brasil · Amazon.com.br</a>
+        <a class="btn verde" href="https://www.amazon.com/s?k=ronny+youxay+oliveira" target="_blank" rel="noopener"><svg class="bandeira" viewBox="0 0 28 20" aria-hidden="true"><rect width="28" height="20" rx="3" fill="#fff"/><g fill="#b22234"><rect y="0" width="28" height="2.2" rx="1"/><rect y="4.4" width="28" height="2.2"/><rect y="8.8" width="28" height="2.2"/><rect y="13.2" width="28" height="2.2"/><rect y="17.6" width="28" height="2.4"/></g><rect width="12.5" height="11" fill="#3c3b6e"/><g fill="#fff"><circle cx="3" cy="3" r=".9"/><circle cx="6.2" cy="3" r=".9"/><circle cx="9.4" cy="3" r=".9"/><circle cx="4.6" cy="5.6" r=".9"/><circle cx="7.8" cy="5.6" r=".9"/><circle cx="3" cy="8.2" r=".9"/><circle cx="6.2" cy="8.2" r=".9"/><circle cx="9.4" cy="8.2" r=".9"/></g></svg>Comprar nos EUA · Amazon.com</a>
       </div>
     </div>
   </div>
